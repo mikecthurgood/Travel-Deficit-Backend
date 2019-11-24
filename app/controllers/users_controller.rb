@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     
     if user
       render json: user.to_json(:include => {
-        :countries => {:only => [:name] }, :badges => {:only => [:name, :description]}
+        :countries => {:only => [:name, :code] }, :badges => {:only => [:name, :description]}
       })
 
       else
@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 
     if user
       render json: user.to_json(:include => {
-        :countries => {:only => [:name] }, :badges => {:only => [:name, :description]}
+        :countries => {:only => [:name, :code] }, :badges => {:only => [:name, :description]}
       })
 
       else
@@ -31,11 +31,20 @@ class UsersController < ApplicationController
     end
   end
 
-  def add_country
-    user = get_current_user
-    country = Country.find(params[:id])
-    if !user.countries.include(country)
+  def add_user_country
+    user = User.find(params[:userId])
+    country = Country.find(params[:countryId])
+    if !user.countries.include?(country)
       user.countries << country
+      render json: user.to_json(:include => {
+        :countries => {:only => [:name] }, :badges => {:only => [:name, :description]}
+      })
+    else
+      user.countries.delete(country)
+      render json: user.to_json(:include => {
+        :countries => {:only => [:name] }, :badges => {:only => [:name, :description]}
+      })
+    end
   end
 
   def update
