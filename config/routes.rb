@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   post '/login', to: 'users#login'
   get '/validate', to: 'users#validate'
   post '/add-user-country', to: 'users#add_user_country'
+  post '/add-to-wishlist', to: 'users#add_to_wishlist'
+  patch '/users/:id', to: 'users#update'
 
 end
