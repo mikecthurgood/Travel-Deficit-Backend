@@ -1,6 +1,6 @@
-laos = Country.find_by(name: 'Laos')
-laos.code = 'la'
-laos.save
+# laos = Country.find_by(name: 'Laos')
+# laos.code = 'la'
+# laos.save
 
 Country.create(
     name: "Czech Republic",
@@ -8,10 +8,6 @@ Country.create(
     continent: "Europe",
     code: 'cz',
     population: 10686269,
-    nationality: {
-        "noun": "Czech(s)",
-        "adjective": "Czech"
-    },
     climate: "temperate; cool summers; cold, cloudy, humid winters",
     terrain: "Bohemia in the west consists of rolling plains, hills, and plateaus surrounded by low mountains; Moravia in the east consists of very hilly country"
 )
