@@ -1,3 +1,17 @@
 laos = Country.find_by(name: 'Laos')
 laos.code = 'la'
 laos.save
+
+Country.create(
+    name: "Czech Republic",
+    description: "At the close of World War I, the Czechs and Slovaks of the former Austro-Hungarian Empire merged to form Czechoslovakia. During the interwar years, having rejected a federal system, the new country's predominantly Czech leaders were frequently preoccupied with meeting the increasingly strident demands of other ethnic minorities within the republic, most notably the Slovaks, the Sudeten Germans, and the Ruthenians (Ukrainians). On the eve of World War II, Nazi Germany occupied the territory that today comprises Czechia, and Slovakia became an independent state allied with Germany. After the war, a reunited but truncated Czechoslovakia (less Ruthenia) fell within the Soviet sphere of influence. In 1968, an invasion by Warsaw Pact troops ended the efforts of the country's leaders to liberalize communist rule and create \"socialism with a human face,\" ushering in a period of repression known as \"normalization.\" The peaceful \"Velvet Revolution\" swept the Communist Party from power at the end of 1989 and inaugurated a return to democratic rule and a market economy. On 1 January 1993, the country underwent a nonviolent \"velvet divorce\" into its two national components, the Czech Republic and Slovakia. The Czech Republic joined NATO in 1999 and the European Union in 2004. The country added the short-form name Czechia in 2016, while continuing to use the full form name, Czech Republic.",
+    continent: "Europe",
+    code: 'cz',
+    population: 10686269,
+    nationality: {
+        "noun": "Czech(s)",
+        "adjective": "Czech"
+    },
+    climate: "temperate; cool summers; cold, cloudy, humid winters",
+    terrain: "Bohemia in the west consists of rolling plains, hills, and plateaus surrounded by low mountains; Moravia in the east consists of very hilly country"
+)
