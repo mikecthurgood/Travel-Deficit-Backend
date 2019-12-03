@@ -8,7 +8,7 @@ class Country < ApplicationRecord
         response = Unirest.post "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/pricing/v1.0",
   headers:{
     "X-RapidAPI-Host" => "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
-    "X-RapidAPI-Key" => "0d5efc74c5msh7dfd2aaa64fdf54p129ba0jsne3580f668b49",
+    "X-RapidAPI-Key" => "571c034a1amshba07a35df5f1f2bp163af5jsn9566c59b5b86",
     "Content-Type" => "application/x-www-form-urlencoded"
   },
   parameters:{
