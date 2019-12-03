@@ -9,7 +9,7 @@ class Country < ApplicationRecord
   headers:{
     "X-RapidAPI-Host" => "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
     "X-RapidAPI-Key" => "0d5efc74c5msh7dfd2aaa64fdf54p129ba0jsne3580f668b49",
-    "Content-Type" => "application/json"
+    "Content-Type" => "application/x-www-form-urlencoded"
   },
   parameters:{
     "inboundDate" => returnDate,

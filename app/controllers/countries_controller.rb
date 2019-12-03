@@ -26,6 +26,7 @@ class CountriesController < ApplicationController
 
   def recommendations
     recommendation = Country.call_skyscanner(params[:departureLocation], params[:destination], params[:departureDate], params[:returnDate])
+    byebug
     render json: recommendation
   end
 
