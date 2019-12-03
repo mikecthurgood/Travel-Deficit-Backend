@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/countries-and-info', to: 'countries#info'
   get '/countries/:id', to: 'countries#show'
   post '/countries', to: 'countries#create'
+  post '/countries/recommendations', to: 'countries#recommendations'
   # patch '/countries/:id', to: 'countries#update'
   post '/login', to: 'users#login'
   get '/validate', to: 'users#validate'
