@@ -7,7 +7,7 @@ class CountriesController < ApplicationController
 
   def info
     countries = Country.all
-      render json: countries.to_json(:only => [:id, :name, :description, :continent, :population, :climate, :terrain, :code])
+      render json: countries.to_json(:only => [:id, :name, :description, :continent, :population, :climate, :terrain, :code, :image_url])
   end
 
   def create
