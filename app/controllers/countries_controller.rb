@@ -29,10 +29,10 @@ class CountriesController < ApplicationController
     render json: recommendation
   end
 
-  # def update
-  #   country = Country.find(params[:id])
-  #   country.code = params[:code]
-  #   country.save
-  # end
+  def update
+    country = Country.find(params[:id])
+    country.image_url = params[:image_url]
+    country.save
+  end
   
 end
